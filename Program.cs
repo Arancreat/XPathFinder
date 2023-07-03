@@ -91,7 +91,7 @@ namespace XPathFinder
                     // If XPath contains a keyword then
                     // we need to save it lol
                     if (xPath.ToLower().Contains(keyWord.ToLower())) 
-                        desiredXPaths.Add(xPath);
+                        desiredXPaths.Add(xPath.Replace("doc()", ""));
 
                     // Read the next line
                     line = sr.ReadLine();
